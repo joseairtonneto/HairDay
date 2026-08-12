@@ -1,75 +1,87 @@
-# React + TypeScript + Vite
+# ✂️ HairDay
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> Primeiro desafio da Formação React 2025.
 
-Currently, two official plugins are available:
+O **HairDay** é uma aplicação web de agendamentos desenvolvida para praticar e consolidar os conceitos fundamentais do ecossistema React.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 📌 Sobre o Projeto
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+Esse é o primeiro desafio da formação React 2025, onde você vai construir uma aplicação de agendamentos chamada HairDay. O objetivo é praticar conceitos fundamentais do React, como estados, imutabilidade, listas, propriedades e componentização.
 
-Note: This will impact Vite dev & build performances.
+Apesar de simples, a aplicação envolve funcionalidades essenciais que serão muito úteis em projetos futuros: criar, exibir e remover agendamentos, além de exercitar diferentes tipos de inputs.
 
-## Expanding the ESLint configuration
+### 🧠 Conceitos Praticados
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Componentização:** Divisão da interface em blocos reutilizáveis e isolados.
+- **Estados (`useState`):** Gerenciamento dinâmico do estado da aplicação.
+- **Imutabilidade:** Atualização correta de dados e listas sem alterar o estado diretamente.
+- **Propriedades (`props`):** Comunicação e passagem de dados/funções entre componentes.
+- **Formulários e Inputs:** Manipulação e controle de diferentes tipos de entrada de dados.
+- **Renderização de Listas:** Exibição dinâmica de agendamentos.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 🚀 Funcionalidades
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- [x] **Criar Agendamentos:** Registro informando nome do cliente, data e horário.
+- [x] **Exibir Agendamentos:** Listagem organizada dos horários agendados.
+- [x] **Remover Agendamentos:** Cancelamento e exclusão de agendamentos da lista.
+- [x] **Controle de Inputs:** Manipulação e validação de diferentes tipos de campos de entrada.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🛠️ Tecnologias Utilizadas
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- **[React](https://react.dev/)**
+- **JavaScript (ES6+)** / **TypeScript**
+- **[Vite](https://vitejs.dev/)**
+- **CSS3 / HTML5**
+
+---
+
+## 💻 Como Executar o Projeto
+
+### 📋 Pré-requisitos
+
+Antes de começar, certifique-se de ter instalado em sua máquina:
+- [Git](https://git-scm.com/)
+- [Node.js](https://nodejs.org/)
+
+### 📦 Passo a Passo
+
+1. **Clonar o repositório:**
+   ```bash
+   git clone [https://github.com/joseairtonneto/HairDay.git](https://github.com/joseairtonneto/HairDay.git)
+   ```
+
+2. **Acessar a pasta do projeto:**
+   ```bash
+   cd HairDay
+   ```
+
+3. **Instalar as dependências:**
+   ```bash
+   npm install
+   ```
+
+4. **Executar a aplicação em modo de desenvolvimento:**
+   ```bash
+   npm run dev
+   ```
+
+5. **Acessar no navegador:**
+   Abra a URL indicada no terminal (geralmente `http://localhost:5173`).
+
+---
+
+## 📄 Licença
+
+Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+
+---
+
+<p align="center">
+  Desenvolvido por <a href="https://github.com/joseairtonneto">José Airton Neto</a> 🚀
+</p>
