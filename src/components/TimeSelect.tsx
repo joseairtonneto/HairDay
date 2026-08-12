@@ -3,7 +3,7 @@ import { cva, cx, type VariantProps } from 'class-variance-authority'
 import Text from './Text'
 
 export const inputTextWrapperVariants = cva(
-  'inline-flex items-center justify-items-center p-3 gap-2 rounded-lg border border-gray-500 transition outline-none text-center w-19.5 h-10 group cursor-pointer',
+  'inline-flex items-center justify-items-center p-3 gap-2 rounded-lg border border-gray-500 transition outline-none text-center w-18.5 h-10 group cursor-pointer',
   {
     variants: {
       variant: {
@@ -23,7 +23,7 @@ export const inputTextWrapperVariants = cva(
 export const inputTextTextVariants = cva('text-gray-200', {
   variants: {
     variant: {
-      primary: 'group-data-selected:text-yellow-base',
+      primary: 'w-full group-data-selected:text-yellow-base',
     },
     disabled: {
       true: 'text-gray-500 pointer-events-none',
@@ -63,14 +63,14 @@ export default function TimeSelect({
     <div
       className={cx(
         inputTextWrapperVariants({ variant, disabled }),
-        'w-full cursor-pointer',
+        'cursor-pointer',
         className,
       )}
       data-selected={value === children ? true : undefined}
       onClick={handleClick}
       {...props}
     >
-      <Text variant='title-md-bold' className={inputTextTextVariants({ variant, disabled })}>
+      <Text variant='title-md' className={inputTextTextVariants({ variant, disabled })}>
         {children}
       </Text>
     </div>

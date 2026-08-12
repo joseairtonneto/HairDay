@@ -5,7 +5,7 @@ import { ptBR } from 'date-fns/locale'
 
 import * as Popover from '@radix-ui/react-popover'
 import { DayPicker } from 'react-day-picker'
-import { textVariants } from './Text'
+import Text, { textVariants } from './Text'
 import Icon from './Icon'
 
 import CaretDown from '../assets/icons/CaretDown.svg?react'
@@ -120,17 +120,18 @@ export default function InputText({
       {icon && <Icon svg={icon} className={inputTextIconVariants({ variant })} />}
 
       {isDate ? (
-        <span
+        <Text
+          as='span'
           className={cx(
             textVariants(),
-            'w-full text-left cursor-pointer',
+            'w-full text-left cursor-pointer text-gray-200',
             !selectedDate && 'text-gray-500',
           )}
         >
           {selectedDate
             ? format(selectedDate, 'dd/MM/yyyy')
             : props.placeholder || 'Selecione uma data'}
-        </span>
+        </Text>
       ) : (
         <input
           ref={inputRef}

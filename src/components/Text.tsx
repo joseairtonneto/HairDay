@@ -4,15 +4,15 @@ import { cva, type VariantProps } from 'class-variance-authority'
 export const textVariants = cva('font-sans text-gray-100', {
   variants: {
     variant: {
-      'title-sm': 'text-sm leading-5 font-normal',
-      'title-sm-bold': 'text-sm leading-5 font-bold',
-      'title-md': 'text-base leading-6 font-normal',
-      'title-md-bold': 'text-base leading-6 font-bold',
-      'title-lg': 'text-[2rem] leading-6 font-bold',
+      'text-sm': 'text-sm leading-5 font-normal',
+      'title-sm': 'text-sm leading-5 font-bold',
+      'text-md': 'text-base leading-6 font-normal',
+      'title-md': 'text-base leading-6 font-bold',
+      'title-lg': 'text-2xl leading-6 font-bold',
     },
   },
   defaultVariants: {
-    variant: 'title-md',
+    variant: 'text-md',
   },
 })
 

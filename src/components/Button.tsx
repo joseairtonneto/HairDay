@@ -51,7 +51,7 @@ export default function Button({
 }: ButtonProps) {
   return (
     <button className={buttonVariants({ variant, size, disabled, className })} {...props}>
-      <Text variant='title-sm' className={buttonTextVariants({ variant })}>
+      <Text variant='text-sm' className={buttonTextVariants({ variant })}>
         {children}
       </Text>
     </button>
